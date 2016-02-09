@@ -12,7 +12,7 @@
     <script type="text/javascript">
       angular.module("notesApp", [])
         .controller("MainCtrl", [function() {
-          var self = this;
+          var self = this; // this inside and outside a function can refer to two completely different object scopes thus it is generally better to assign the this refernce inside a controller proxy ('self') for clarity
           self.msg = "Hi there";
 
           self.changeMsg = function() {
