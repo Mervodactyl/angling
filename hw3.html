@@ -1,0 +1,16 @@
+<!DOCTYPE html5>
+<html ng-app="notesApp">
+  <head>
+    <title>Angling</title>
+  </head>
+  <body ng-controller="MainCtrl">
+    Hello {{ 1 + 1 }}nd time Angular
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script type="text/javascript">
+      angular.module("notesApp", [])
+        .controller("MainCtrl", [function() { // [] is better for safe style dependency injections
+          console.log("MainCtrl has been created");
+        }]);
+    </script>
+  </body>
+</html>

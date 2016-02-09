@@ -1,0 +1,21 @@
+<!DOCTYPE html5>
+<html ng-app="notesApp">
+  <head>
+    <title>Angling</title>
+  </head>
+  <body ng-controller="MainCtrl as ctrl">
+    {{ ctrl.helloMsg }} AngularJS
+    </br>
+    {{ ctrl.goodByeMsg }} AngularJS
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script type="text/javascript">
+      angular.module("notesApp", [])
+        .controller("MainCtrl", [function() {
+          this.helloMsg = "Hello!";
+          this.goodByeMsg = "Farewell!";
+          // var goodByeMsg = "Goodbye"; 
+          // scope is key! local, inner variables are not accessible from the HTML
+        }]);
+    </script>
+  </body>
+</html>
