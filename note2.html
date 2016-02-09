@@ -1,0 +1,40 @@
+<!DOCTYPE html5>
+<html ng-app="notesApp">
+  <head>
+    <title>Notes App</title>
+  </head>
+  <body ng-controller="MainCtrl as ctrl">
+    <div ng-repeat="(author, note) in ctrl.notes">
+      <span class="label"> {{note.label}}</span>
+      <span class="author" ng-bind="author"></span>
+    </div>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script> new version of AJS does not make ng-repeat -->
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.js">
+    </script>
+    <script type="text/javascript">
+      angular.module("notesApp", [])
+        .controller("MainCtrl", [function() {
+          var self = this;
+
+        self.notes = { // note that this is an OBJECT NOT AN ARRAY - ng-repest will order things differently if using OLDER version of AJS
+          merve : {
+            id : 1,
+            label : "First Note",
+            done : false
+          },
+          Roi : {
+            id : 3,
+            label : "Finished Third Note",
+            done : true
+          },
+          anna : {
+            id : 2,
+            label : "Second Note",
+            done : false
+          }
+        };
+      }]);
+    </script>
+  </body>
+</html>
