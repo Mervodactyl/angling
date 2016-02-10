@@ -1,0 +1,22 @@
+{
+  "name": "angling",
+  "version": "1.0.0",
+  "description": "Some angular exercises and examples of what we can do with this amazing framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mervodactyl/angling.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mervodactyl/angling/issues"
+  },
+  "homepage": "https://github.com/Mervodactyl/angling#readme",
+  "devDependencies": {
+    "jasmine": "^2.4.1"
+  }
+}
